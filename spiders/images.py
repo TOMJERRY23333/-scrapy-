@@ -1,8 +1,4 @@
 # coding:utf-8
-"""
-获取微博图片练习
-author: 李灏城
-"""
 
 import scrapy
 from scrapy import Selector, Spider
@@ -39,20 +35,4 @@ class Image_Spider(Spider):
         item = weiboimageItem()
         item['image_urls'] = urls
         yield item
-        # request_meta = response.meta
-        # request_meta['item'] = item
-        # for i in range(2, 51):
-        #     yield Request(self.base_url + str(i), callback=self.parse_further, meta=request_meta)
 
-    # def parse_further(self, response):
-    #     item = response.meta['item']
-    #     # inspect_response(response, self)
-    #     self.log('A response from %s just arrived!' % response.url)
-    #     selector = Selector(response)
-    #     url_list = selector.xpath("//div[@class='media media-piclist']/ul/li/img/@src").extract()
-    #     urls = []
-    #     for i in url_list:
-    #         url = i.replace('/orj360/', '/mw1024/').replace('/thumb180/', '/mw1024/')
-    #         urls.append(url)
-    #     item['image_urls'] = urls
-    #     yield item
