@@ -1,11 +1,5 @@
-#!/usr/bin/env python
 # encoding: utf-8
-"""
-File Description:
-Author: nghuyong
-Mail: nghuyong@163.com
-Created Time: 2020/4/14
-"""
+
 import re
 from scrapy import Selector, Spider
 from scrapy.http import Request
